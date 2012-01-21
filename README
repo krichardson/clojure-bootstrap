@@ -1,6 +1,6 @@
 # clojure-bootstrap
 
-Basic framework for a compojure, enlive and twitter bootstrap project
+Example/outline app for using compojure & hiccup with twitter bootstrap
 
 ## Usage
 
