@@ -1,6 +1,6 @@
 (ns clojure-bootstrap.views.index
   (:use [hiccup.core]
-        [hiccup.page-helpers])
+        [hiccup.page])
     (:require (clojure-bootstrap.views
                 [utils :as utils]
                 [layout :as layout])))
