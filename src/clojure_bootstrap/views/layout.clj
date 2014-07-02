@@ -24,16 +24,17 @@
 (defn layout-head [title]
   [:head
    [:title title]
-   (utils/include-less "/css/lib/bootstrap.less")
-   (utils/include-js "/js/less-1.2.0.min.js")
+   (utils/include-css "/css/bootstrap.min.css")
+   (utils/include-js "/js/jquery-2.1.1.min.js")
+   (utils/include-js "/js/bootstrap.js")
    (utils/inline-css "body { padding-top: 60px; }")])
 
 (defn nav-fixed [links]
   [:div.navbar.navbar-fixed
-   [:div.navbar-inner
-    [:div.container
-     [:a.brand {:href config/SITE-ROOT-PATH} config/SITE-TITLE]
-     [:ul.nav
+   [:div.container
+    [:div.navbar-header
+     [:a.navbar-brand {:href config/SITE-ROOT-PATH} config/SITE-TITLE]
+     [:ul.nav.navbar-nav
       (for [key (keys links)]
         (let [link (links key)]
           [:li
@@ -42,6 +43,8 @@
 
 (defn layout [title body active-nav]
   (html
+   "<!DOCTYPE html>"
+   [:html
     (layout-head title)
     [:body
      (nav-fixed (nav-with-active nav active-nav))
@@ -50,4 +53,4 @@
       [:div.container
        [:p.pull-right
         [:a {:href "#"} "Back to top"]]
-       [:p "Built with Twitter Bootstrap"]]]]))
+       [:p "Built with Twitter Bootstrap"]]]]]))

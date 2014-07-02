@@ -9,10 +9,10 @@
   (layout/layout
     "Welcome"
     (html
-      [:div.hero-unit
+      [:div.jumbotron
        [:h1 "Hello, world!"]
        [:p "Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."]
-       [:p [:a.btn.primary.large "Learn more &raquo;"]]]
+       [:p [:a.btn.btn-default.btn-lg "Learn more &raquo;"]]]
       [:div.row
        (utils/summary-block
         5
