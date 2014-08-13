@@ -1,15 +1,10 @@
 (ns clojure-bootstrap.views.utils
   (:use [hiccup.core]))
 
-(defn include-less
-  "creates a less stylesheet link"
-  [href]
-  [:link {:rel "stylesheet/less" :href href}])
-
 (defn include-css
   "creates a css stylesheet link"
   [href]
-  [:link {:rel "stylesheet/css" :href href}])
+  [:link {:rel "stylesheet" :href href}])
 
 (defn include-js
   "creates a javascript link"
